@@ -16,6 +16,7 @@ export default {
   methods: {
     //funzione per prelevare film e serie tramite chiamata api con axios
     getMovieSerie() {
+      //chiamo  tutti i film che corrispondono con la search key
       axios
         .get(
           `https://api.themoviedb.org/3/search/movie?api_key=e18e0190f5c87edd4a7a89d769aefe6e&language=it&query=${this.store.searchKey}`
