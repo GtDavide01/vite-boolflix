@@ -18,9 +18,11 @@ export default {
     getMovieSerie() {
       axios.get(this.store.apiUrlMovies).then((resp) => {
         this.store.listMovies = resp.data.results;
+        console.log(this.store.listMovies);
       });
       axios.get(this.store.apiUrlSeries).then((resp) => {
         this.store.listSeries = resp.data.results;
+        console.log(this.store.listSeries);
       });
     },
     searchFilter() {},
