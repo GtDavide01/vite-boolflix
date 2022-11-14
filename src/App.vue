@@ -3,7 +3,8 @@
 // import
 import axios from "axios";
 import { store } from "./store";
-import AppSearchVue from "./components/AppSearch.vue";
+import AppMainVue from "./components/AppMain.vue";
+import AppHeaderVue from "./components/AppHeader.vue";
 export default {
   data() {
     return {
@@ -11,7 +12,8 @@ export default {
     };
   },
   components: {
-    AppSearchVue,
+    AppHeaderVue,
+    AppMainVue,
   },
   methods: {
     //funzione per prelevare film e serie tramite chiamata api con axios
@@ -41,9 +43,15 @@ export default {
 </script>
 <!-- HTML -->
 <template>
-  <AppSearchVue @searchMovieSerie="getMovieSerie" />
+  <div class="boolflix">
+    <AppHeaderVue @searchMovieSerie="getMovieSerie" />
+    <AppMainVue />
+  </div>
 </template>
 <!-- CSS -->
 <style lang="scss">
 @use "./styles/general.scss";
+.boolflix {
+  height: 100vh;
+}
 </style>
