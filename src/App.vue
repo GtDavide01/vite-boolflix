@@ -16,14 +16,22 @@ export default {
   methods: {
     //funzione per prelevare film e serie tramite chiamata api con axios
     getMovieSerie() {
-      axios.get(this.store.apiUrlMovies).then((resp) => {
-        this.store.listMovies = resp.data.results;
-        console.log(this.store.listMovies);
-      });
-      axios.get(this.store.apiUrlSeries).then((resp) => {
-        this.store.listSeries = resp.data.results;
-        console.log(this.store.listSeries);
-      });
+      axios
+        .get(
+          `https://api.themoviedb.org/3/search/movie?api_key=e18e0190f5c87edd4a7a89d769aefe6e&language=it&query=${this.store.searchKey}`
+        )
+        .then((resp) => {
+          this.store.listMovies = resp.data.results;
+          console.log(this.store.listMovies);
+        });
+      axios
+        .get(
+          `https://api.themoviedb.org/3/search/tv?api_key=e18e0190f5c87edd4a7a89d769aefe6e&language=it&query=${this.store.searchKey}`
+        )
+        .then((resp) => {
+          this.store.listSeries = resp.data.results;
+          console.log(this.store.listSeries);
+        });
     },
     searchFilter() {},
   },
