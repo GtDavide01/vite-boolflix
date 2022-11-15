@@ -26,6 +26,7 @@ export default {
         .then((resp) => {
           this.store.listMovies = resp.data.results;
           console.log(this.store.listMovies);
+          this.store.searchKey = "";
         });
       axios
         .get(
@@ -34,6 +35,7 @@ export default {
         .then((resp) => {
           this.store.listSeries = resp.data.results;
           console.log(this.store.listSeries);
+          this.store.searchKey = "";
         });
     },
     searchFilter() {},

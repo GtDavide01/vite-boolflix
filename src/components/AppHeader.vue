@@ -20,6 +20,7 @@ export default {
         type="text"
         placeholder="Inserisci un titolo di film / serie"
         v-model="store.searchKey"
+        @keyup.enter="$emit('searchMovieSerie')"
       />
       <button @click="$emit('searchMovieSerie')">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -51,21 +52,24 @@ header {
     justify-content: flex-end;
     align-items: center;
     input {
-      color: black;
+      background-color: black;
       font-size: 1rem;
       width: 20%;
       height: 50%;
-      border: 1px solid red;
-      border-radius: 30px;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      border-bottom: 2px solid #de1a26;
       padding: 0.8rem;
-      background-color: $text-white;
     }
     button {
       color: white;
       background-color: black;
-      font-size: 1.3rem;
-      padding: 0 20px;
+      font-size: 1rem;
+      padding: 0 10px;
+      margin: 0 20px;
       cursor: pointer;
+      border: none;
     }
   }
 }

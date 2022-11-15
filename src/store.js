@@ -5,6 +5,5 @@ export const store = reactive({
   listSeries: [],
   searchKey: "",
   loading: false,
-  voteFive: null,
-  imgFront: "https://image.tmdb.org/t/p/w342",
+  imgFront: "https://image.tmdb.org/t/p/w500",
 });

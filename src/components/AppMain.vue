@@ -28,7 +28,7 @@ export default {
         :originalTitle="item.original_title"
         :orginalLanguage="item.original_language"
         :vote="Math.ceil(item.vote_average / 2)"
-        :img="store.imgFront + item.backdrop_path"
+        :img="store.imgFront + item.poster_path"
       />
     </div>
     <h2>SERIE</h2>
@@ -37,10 +37,10 @@ export default {
         v-for="(item, indice) in store.listSeries"
         :key="indice"
         :title="item.name"
-        :originalTitle="item.original_name"
+        :originalTitle="item.name"
         :orginalLanguage="item.original_language"
         :vote="Math.ceil(item.vote_average / 2)"
-        :img="store.imgFront + item.backdrop_path"
+        :img="store.imgFront + item.poster_path"
       />
     </div>
   </main>
@@ -61,7 +61,7 @@ main {
 }
 
 h2 {
-  color: white;
+  color: #de1a26;
   padding: 2rem;
 }
 </style>
