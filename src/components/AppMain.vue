@@ -19,7 +19,13 @@ export default {
 <template>
   <!-- main -->
   <main>
-    <h2>FILM</h2>
+    <h2 v-if="store.listMovies.length === 0 && store.listSeries.length === 0">
+      Fai la tua prima ricerca...
+    </h2>
+    <h2 v-if="store.listMovies.length > 0">
+      La tua ricerca per "{{ store.searchKey }}"
+    </h2>
+    <h2 v-if="store.listMovies.length > 0">FILM</h2>
     <div class="cardcontain">
       <AppCardVue
         v-for="(item, indice) in store.listMovies"
@@ -31,7 +37,7 @@ export default {
         :img="store.imgFront + item.poster_path"
       />
     </div>
-    <h2>SERIE</h2>
+    <h2 v-if="store.listSeries.length > 0">SERIE</h2>
     <div class="cardcontain">
       <AppCardVue
         v-for="(item, indice) in store.listSeries"

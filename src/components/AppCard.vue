@@ -80,24 +80,30 @@ export default {
   border-radius: 20px;
   width: calc(100% / 6 - 30px);
   margin: 15px;
+  cursor: pointer;
   .imgcard {
     img {
+      display: block;
       border-radius: 20px;
       padding: 10px;
       width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
   .infocard {
+    transition: 2s;
+    overflow: hidden;
     display: flex;
-    border-radius: 20px;
+    border-radius: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     color: white;
-    height: 100%;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -115,6 +121,7 @@ export default {
     span {
       color: white;
       padding: 5px;
+      margin: 10px 0;
     }
     ul {
       display: flex;
@@ -122,13 +129,12 @@ export default {
       list-style-type: none;
       li {
         color: yellow;
+        margin: 0 3px;
       }
     }
   }
 }
-.card:hover .imgcard {
-  display: none;
-}
+
 .card:hover .infocard {
   display: flex;
 }
