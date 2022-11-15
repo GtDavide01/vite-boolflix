@@ -52,6 +52,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     input {
+      outline: none;
       background-color: black;
       font-size: 1rem;
       width: 20%;

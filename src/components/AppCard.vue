@@ -31,41 +31,43 @@ export default {
       <span v-if="vote === 1">
         <ul>
           Vote :
-          <li><i class="fa-solid fa-star"></i></li>
+          <li class="yellow"><i class="fa-solid fa-star"></i></li>
+          <li v-for="number in 4"><i class="fa-solid fa-star"></i></li>
         </ul>
       </span>
       <span v-if="vote === 2">
         <ul>
           Vote :
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
+          <li class="yellow" v-for="number in 2">
+            <i class="fa-solid fa-star"></i>
+          </li>
+          <li v-for="number in 3"><i class="fa-solid fa-star"></i></li>
         </ul>
       </span>
       <span v-if="vote === 3">
         <ul>
           Vote :
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
+          <li class="yellow" v-for="number in 3">
+            <i class="fa-solid fa-star"></i>
+          </li>
+          <li v-for="number in 2"><i class="fa-solid fa-star"></i></li>
         </ul>
       </span>
       <span v-if="vote === 4">
         <ul>
           Vote :
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
+          <li class="yellow" v-for="number in 4">
+            <i class="fa-solid fa-star"></i>
+          </li>
           <li><i class="fa-solid fa-star"></i></li>
         </ul>
       </span>
       <span v-if="vote === 5">
         <ul>
           Vote :
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
-          <li><i class="fa-solid fa-star"></i></li>
+          <li class="yellow" v-for="number in 5">
+            <i class="fa-solid fa-star"></i>
+          </li>
         </ul>
       </span>
     </div>
@@ -127,8 +129,10 @@ export default {
       display: flex;
       text-decoration: none;
       list-style-type: none;
-      li {
+      .yellow {
         color: yellow;
+      }
+      li {
         margin: 0 3px;
       }
     }
