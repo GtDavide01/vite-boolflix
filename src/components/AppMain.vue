@@ -35,6 +35,7 @@ export default {
         :orginalLanguage="item.original_language"
         :vote="Math.ceil(item.vote_average / 2)"
         :img="store.imgFront + item.poster_path"
+        :overview="item.overview"
       />
     </div>
     <h2 v-if="store.listSeries.length > 0">SERIE</h2>
@@ -47,6 +48,7 @@ export default {
         :orginalLanguage="item.original_language"
         :vote="Math.ceil(item.vote_average / 2)"
         :img="store.imgFront + item.poster_path"
+        :overview="item.overview"
       />
     </div>
   </main>

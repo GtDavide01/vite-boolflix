@@ -14,6 +14,7 @@ export default {
     orginalLanguage: String,
     vote: String,
     img: String,
+    overview: String,
   },
 };
 </script>
@@ -70,6 +71,7 @@ export default {
           </li>
         </ul>
       </span>
+      <span>Descrizione : {{ overview }}</span>
     </div>
   </div>
 </template>
@@ -78,24 +80,24 @@ export default {
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@200;400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 .card {
+  overflow: hidden;
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
   width: calc(100% / 6 - 30px);
   margin: 15px;
   cursor: pointer;
   .imgcard {
     img {
       display: block;
-      border-radius: 20px;
-      padding: 10px;
+      border-radius: 10px;
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   }
   .infocard {
+    overflow-y: auto;
     transition: 2s;
-    overflow: hidden;
     display: flex;
     border-radius: 10px;
     top: 50%;
@@ -107,7 +109,6 @@ export default {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 10px;
